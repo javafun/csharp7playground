@@ -10,13 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            var pair1 = (42, "hello");
+            Console.Write(Method(pair1).message);
 
+            var pair2 = (code: 43, message: "world");
+            Console.Write(pair2.message);
         }
 
-        public (int lat,int lng) GetLocation(string address)
+        public static (int code, string message) Method((int, string) x)
         {
-
-            return null;
+            return x;
         }
+
     }
 }
